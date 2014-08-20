@@ -1,0 +1,14 @@
+/*
+Theme Name: Tema Wordpress KMC
+Theme URI: https://github.com/agkmc/kmc_wordpress/
+Author: Agência KMC
+Author URI: http://agenciakmc.com.br/
+Description: Tema padrão para desenvolvimento de sites wordpress da Agência KMC
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: agencia kmc, tema padrao wordpress
+Text Domain: temapadraokmc
+*/
+
+@import 'assets/css/style.min.css';
