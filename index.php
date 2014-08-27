@@ -2,7 +2,7 @@
 
 <div class="conteudo container">
     <div id="content_destaque">
-    	
+    	<?php query_posts('category_name=destaque'); ?>
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
  		<div class="content_destaque_item col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <a href="">
@@ -41,6 +41,8 @@
         <div class="separacao"></div>
         <div class="barra"></div>
         <div class="separacao"></div>
+        <?php query_posts('category_name=trabalhos'); ?>
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="content_trabalhos_item col-lg-3 col-md-3 col-sm-6 col-xs-6">
             <a href="">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/trabalho1.jpg"  class="imagem img-responsive" alt="" title="" />
@@ -48,6 +50,12 @@
                 <span class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac sapien eget arcu semper placerat.</span>
             </a>
         </div><!--FIM CONTENT TRABALHO ITEM-->
+        <?php endwhile?>
+         
+        <?php else: ?>
+             
+        <?php endif; ?>
+        
         <div class="content_trabalhos_item col-lg-3 col-md-3 col-sm-6 col-xs-6">
             <a href="">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/trabalho2.jpg"  class="imagem img-responsive" alt="" title="" />
