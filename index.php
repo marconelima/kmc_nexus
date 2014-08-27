@@ -2,13 +2,22 @@
 
 <div class="conteudo container">
     <div id="content_destaque">
-        <div class="content_destaque_item col-lg-4 col-md-4 col-sm-4 col-xs-4">
+    	
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+ 		<div class="content_destaque_item col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <a href="">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/imagem1.png"  class="imagem img-responsive" alt="" title="" />
                 <span class="titulo">Especialidade de Ensino a Dinstância</span>
                 <span class="texto">Material didático elaborado por Doutora em Ensino a dinstância, considerando as especificidades postas pela educação online. A organização curricular dos cursos elaborados pela Nexus respeitam as diferenças estruturais entre a educação presencial e a educação a distância.</span>
             </a>
         </div><!--FIM DIV CONTENT DESTAQUE ITEM-->
+		<?php endwhile?>
+         
+        <?php else: ?>
+             
+        <?php endif; ?>
+        
+        
         <div class="content_destaque_item col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <a href="">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/imagem2.png"  class="imagem img-responsive" alt="" title="" />
