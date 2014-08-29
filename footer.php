@@ -107,7 +107,7 @@
 							}
 							?>
 							<div class="footer_post_item">
-								<a href="">
+								<a href="<?php the_permalink() ?>">
 									<img src="<?php echo $post_image; ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" >
 									<span class="titulo"><?php the_title(); ?></span>
 									<span class="texto"><?php the_time('F j, Y') ?></span>
@@ -123,14 +123,26 @@
                         <div class="separacao"></div>
                         <div class="barra"></div>
                         <div class="separacao"></div>
-                        <div id="footer_fale_item">
-                        <form action="index.php" method="post" enctype="multipart/form-data">
-                            <input type="text" value="" name="nome" id="nome" placeholder="Seu nome*" />
-                            <input type="text" value="" name="email" id="email" placeholder="Seu email*" />
-                            <textarea name="mensagem" id="mensagem" placeholder="Mensagem*" rows="3" ></textarea>
-                            <input type="submit" name="enviar" value="Enviar" class="btn" />
+                        <div id="footer_fale_item"><div class="sc_contact_form">
+
+                        <form action="wp-admin/admin-ajax.php" >
+                            <input type="text" value="" id="sc_contact_form_username" name="username" placeholder="Seu nome*" />
+                            <input type="text" id="sc_contact_form_email" name="email" placeholder="Seu email*" />
+                            <textarea id="sc_contact_form_message" name="message" placeholder="Mensagem*" rows="3" ></textarea>
+                            <input type="button" name="enviar" value="Enviar" class="btn" />
+                            <div class="result sc_infobox"></div>
                         </form>
-                        </div>
+                        <script type="text/javascript">
+							jQuery(document).ready(function() {
+								jQuery(".footer_fale_item .enter").click(function(e){
+									userSubmitForm(jQuery(this).parents("form"), "wp-admin/admin-ajax.php", "4757f4d62e");
+									e.preventDefault();
+									return false;
+								});
+							});
+						</script>
+
+                        </div></div>
                     </div><!--FIM DIV FOOTER FALE-->
                     <div id="footer_twitter" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                         <span class="titulo">últimas no twitter</span>
@@ -139,28 +151,24 @@
                         <div class="separacao"></div>
                         <div class="footer_twitter_item">
                         	<?php echo add_shortcode('ultimos_tweets','mostra_tweets'); ?>
-                            <a href="">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/twitter.png"  alt="" title="" />
+                            
+                            <!--<a href="">
+                                <img src="<?php //echo get_template_directory_uri(); ?>/assets/img/twitter.png"  alt="" title="" />
                                 <span class="titulo">Lorem ipsum: Dolor consectetur sed do eiusmod tempor incidendunt.</span>
                                 <span class="texto">http://wsaasdfe/elit/sed</span>
                                 <span class="subtexto">about an your ago</span>
-                            </a>
+                            </a>-->
                         </div><!--FIM FOOTER TWITTER ITEM-->
-                        <div class="footer_twitter_item">
-                            <a href="">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/twitter.png"  alt="" title="" />
-                                <span class="titulo">Lorem ipsum: Dolor consectetur sed do eiusmod tempor incidendunt.</span>
-                                <span class="texto">http://wsaasdfe/elit/sed</span>
-                                <span class="subtexto">about an your ago</span>
-                            </a>
-                        </div><!--FIM FOOTER TWITTER ITEM-->
+                        
                     </div><!--FIM DIV FOOTER TWITTER-->
                     <div id="footer_facebook" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                         <span class="titulo">acompanhe pelo facebook</span>
                         <div class="separacao"></div>
                         <div class="barra"></div>
                         <div class="separacao"></div>
-                        <div id="footer_facebook_item">
+                        <div class="fb-like-box" data-href="https://www.facebook.com/FacebookDevelopers" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+                        <?php //echo facebook_likes('FacebookDevelopers');?>
+                        <!--<div id="footer_facebook_item">
                             <img src="http://placehold.it/60x60" title="" alt="" >
                             <img src="http://placehold.it/60x60" title="" alt="" >
                             <img src="http://placehold.it/60x60" title="" alt="" >
@@ -441,7 +449,14 @@ ajax_nonce = "<?php echo $ajax_nonce; ?>";
 
 <?php wp_footer(); ?>
 
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&appId=205159832983961&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 </body>
 </html>

@@ -3507,7 +3507,7 @@ a img {
 .footer_post_item .titulo {font-size:12px !important; font-weight:100; color:#ffffff; width:70% !important; float:left; padding:0 0 0 0 !important; margin:0 0 0 0 !important; padding-top:0px !important; text-transform:none !important; font-weight:100 !important;}
 .footer_post_item .texto {font-size:12px !important; font-weight:100; color:#898989; width:70%; float:left; padding:0; margin:0; text-transform:none !important;}
 
-.btn {padding:5px 15px !important; color:#ffffff; font-weight:bold; font-size:14px; background:#2065C2 !important; width:auto !important; float:right !important; text-transform:uppercase;}
+.btn {padding:0px 15px !important; color:#ffffff !important; font-weight:bold !important; font-size:14px !important; background:#2065C2 !important; width:auto !important; float:right !important; text-transform:uppercase;}
 .btn:hover {background:#5994E3 !important;}
 
 #footer_fale {float:left; height:auto;  padding-right:0; padding-left:0;}

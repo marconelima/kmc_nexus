@@ -751,7 +751,7 @@ function showShareSocialLinks($args) {
 	return $output;
 }
 
-/*
+
 function twitter_followers($account) {
 	$tw = get_transient("twitterfollowers");
 	if ($tw !== false) return $tw;
@@ -785,7 +785,7 @@ function facebook_likes($account) {
 	}
 	return $fb;
 }
-
+/*
 function feedburner_counter($account) {
 	$rss = get_transient("feedburnercounter");
 	if ($rss !== false) return $rss;
