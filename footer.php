@@ -13,7 +13,7 @@
         <div id="footer_sidebar">
             <div id="footer_corpo">
                 <div class="conteudo container">
-                    <div id="footer_post" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                    <div id="footer_post" class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                         <span class="titulo">posts recentes</span>
                         <div class="separacao"></div>
                         <div class="barra"></div>
@@ -118,7 +118,7 @@
 						?>
                         
                     </div><!--FIM DIV FOOTER POST-->
-                    <div id="footer_fale" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                    <div id="footer_fale" class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                         <span class="titulo">fale conosco</span>
                         <div class="separacao"></div>
                         <div class="barra"></div>
