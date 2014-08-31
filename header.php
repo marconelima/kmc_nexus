@@ -221,11 +221,7 @@ if (isset($fonts[$font])) {
 			<?php //} ?>
             
             <div id="header_banner">
-                <a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner1.jpg"  class="img-responsive" alt="" title="" /></a>
-                <div class="conteudo container">
-                <div id="header_banner_prev"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/prev.png"  id="prev" alt="" title="" /></div>
-                <div id="header_banner_next"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/next.png"  id="next" alt="" title="" /></div>
-                </div>
+               <?php echo do_shortcode("[huge_it_slider id='1']"); ?>
             </div><!--FIM DIV HEADER BANNER-->
 
 			<?php
