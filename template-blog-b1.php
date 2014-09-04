@@ -17,7 +17,7 @@
         </a>
     </div><!--FIM DIV CONTENT DESTAQUE ITEM-->
     
-    <?php } elseif($post_categories[0]['term_id'] == 7) { ?>
+    <?php } elseif($post_categories[0]['term_id'] == 10) { ?>
     
     <div class="content_trabalhos_item col-lg-3 col-md-3 col-sm-6 col-xs-6">
             <a href="<?php the_permalink() ?>">
@@ -48,7 +48,7 @@
         	</a>
     </div><!--FIM DIV CONTENT NOTICIAS ITEM-->
     
-    <?php } elseif($post_categories[0]['term_id'] == 3) { ?>
+    <?php } elseif($post_categories[0]['term_id'] == 11) { ?>
     
     <div class="content_sobre_item content_sobre_item1">
     	<a href="<?php the_permalink() ?>">
@@ -58,7 +58,7 @@
     	</a>
     </div><!--FIM DIV CONTENT SOBRE ITEM-->	
     
-    <?php } elseif($post_categories[0]['term_id'] == 11) { ?>
+    <?php } elseif($post_categories[0]['term_id'] == 3) { ?>
     
     <div class="content_depoimento_item">
     	<a href="<?php the_permalink() ?>">

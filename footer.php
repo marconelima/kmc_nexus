@@ -166,7 +166,7 @@
                         <div class="separacao"></div>
                         <div class="barra"></div>
                         <div class="separacao"></div>
-                        <div class="fb-like-box" data-href="https://www.facebook.com/FacebookDevelopers" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+                        <div class="fb-like-box" data-href="https://www.facebook.com/marcone.lima.948" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
                         <?php //echo facebook_likes('FacebookDevelopers');?>
                         <!--<div id="footer_facebook_item">
                             <img src="http://placehold.it/60x60" title="" alt="" >

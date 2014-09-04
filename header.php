@@ -150,6 +150,8 @@ if (isset($fonts[$font])) {
 						<a href="#" class="search_link"><span class="search_over"><span class="icon-search"></span></span></a>
 						<?php
 						global $theme_options, $shortname;
+						//print_r("theme options ".$theme_options);
+						
 						for ($i=count($theme_options)-1; $i>=0; $i--) {
 							if (!isset($theme_options[$i]['id']) || my_substr($theme_options[$i]['id'], my_strlen($shortname)+1, 12)!='social_links') continue;
 							$soc = my_substr($theme_options[$i]['id'], my_strlen($shortname)+1+13);
